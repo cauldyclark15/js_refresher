@@ -5,7 +5,7 @@ const { getIfUtils } = require('webpack-config-utils')
 module.exports = env => {
   const { ifProd, ifNotProd } = getIfUtils(env)
   const config = {
-    context: resolve('client'),
+    context: __dirname,
     entry: './client/ClientApp.js',
     output: {
       filename: 'bundle.js',
@@ -53,11 +53,11 @@ module.exports = env => {
             'img-loader'
           ]
         }
-      ],
-      plugins: [
-        new ProgressBar()
       ]
-    }
+    },
+    plugins: [
+      new ProgressBar()
+    ]
   }
   if (env.debug) {
     console.log(config)
