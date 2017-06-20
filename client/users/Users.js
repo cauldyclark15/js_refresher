@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import { fetchUsersFromServer } from './user-redux'
+import User from './User'
 
 class Users extends React.Component {
   componentDidMount () {
@@ -10,11 +11,9 @@ class Users extends React.Component {
   }
   render () {
     return (
-      <pre>
-        <samp>
-          {JSON.stringify(this.props.users, null, 4)}
-        </samp>
-      </pre>
+      <div>
+        {this.props.users.map(user => <User key={user.id} name={user.name} phone={user.phone} website={user.website} />)}
+      </div>
     )
   }
 }

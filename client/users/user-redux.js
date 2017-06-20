@@ -28,7 +28,7 @@ export function fetchUsersFromServer () {
   return function asyncDispatchUsers (dispatch) {
     var config = {
       method: 'get',
-      url: 'https://jsonplaceholder.typicode.com/posts',
+      url: 'https://jsonplaceholder.typicode.com/users',
       headers: {
         'Content-Type': 'application/json'
       }
