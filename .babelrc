@@ -1,16 +1,11 @@
 {
   "presets": [
-    ["env", { "modules": false, "loose": true }],
-    "react"
+    "react",
+    "env"
   ],
   "env": {
-    "test": {
-      "plugins": [
-        "transform-es2015-modules-commonjs"
-      ]
-    },
     "server": {
-      "plugins":[
+      "plugins": [
         "transform-es2015-modules-commonjs"
       ]
     }

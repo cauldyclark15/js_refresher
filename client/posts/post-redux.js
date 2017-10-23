@@ -44,7 +44,7 @@ export function fetchPostsFromServer () {
   }
 }
 
-const DEFAULT_STATE = {
+export const DEFAULT_STATE = {
   isFetching: false,
   posts: [],
   error: ''

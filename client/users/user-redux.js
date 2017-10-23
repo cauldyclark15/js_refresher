@@ -44,7 +44,7 @@ export function fetchUsersFromServer () {
   }
 }
 
-const DEFAULT_STATE = {
+export const DEFAULT_STATE = {
   isFetching: false,
   users: [],
   error: ''

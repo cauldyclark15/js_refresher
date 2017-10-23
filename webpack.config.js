@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const path = require('path')
 const ProgressBar = require('progress-bar-webpack-plugin')
 const { getIfUtils } = require('webpack-config-utils')
 
@@ -9,7 +9,7 @@ module.exports = env => {
     entry: './client/ClientApp.js',
     output: {
       filename: 'bundle.js',
-      path: resolve('public'),
+      path: path.join(__dirname, '/public'),
       publicPath: '/public/',
       pathinfo: ifNotProd()
     },
@@ -17,6 +17,11 @@ module.exports = env => {
     devServer: {
       publicPath: '/public/',
       historyApiFallback: true
+    },
+    stats: {
+      colors: true,
+      reasons: true,
+      chunks: true
     },
     module: {
       rules: [
@@ -32,7 +37,8 @@ module.exports = env => {
         },
         {
           test: /\.js$/,
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          exclude: /node_modules/
         },
         {
           test: /\.css$/,

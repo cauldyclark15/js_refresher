@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render user component 1`] = `
+<div
+  className="post"
+>
+  <div
+    className="padding"
+  >
+    <div
+      className="media"
+    >
+      <div
+        className="media-body"
+      >
+        <h5
+          className="post-heading"
+        >
+          jc
+        </h5>
+        <p
+          className="post-info"
+        >
+          contact: 
+          1234567
+        </p>
+        <p
+          className="post-info"
+        >
+          website: 
+          http://www.sven.com
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
